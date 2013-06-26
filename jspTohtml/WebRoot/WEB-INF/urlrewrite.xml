@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+	<!DOCTYPE urlrewrite> 
+	
+	<urlrewrite use-query-string="false" use-context="false">
+	 <rule enabled="true">
+		  <note>The rule means that requests to /test/status/ will be redirected to /rewrite-status the url will be rewritten.</note> 
+		  <from casesensitive="false">/test/status/</from> 
+		  <to type="redirect" last="false" qsappend="false">%{context-path}/rewrite-status</to> 
+		  <form>/1.html</form>
+		  <to>/hello.jsp</to>
+	 </rule>
+	 <outbound-rule enabled="true" encodefirst="false">
+		  <note>The outbound-rule specifies that when response.encodeURL is called (if you are using JSTL c:url) the url /rewrite-status will be rewritten to /test/status/. The above rule and this outbound-rule means that end users should never see the url /rewrite-status only /test/status/ both in thier location bar and in hyperlinks in your pages.</note> 
+		  <from casesensitive="false">/rewrite-status</from> 
+		  <to type="forward" last="false" qsappend="false">/test/status/</to> 
+	 </outbound-rule> 
+	</urlrewrite>

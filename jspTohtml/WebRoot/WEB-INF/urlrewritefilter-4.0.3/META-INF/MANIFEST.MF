@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Paul Tuckey
+Implementation-Title: UrlRewriteFilter
+Implementation-Version: 4.0.3
+Implementation-Vendor-Id: org.tuckey
+Built-By: paul
+Build-Jdk: 1.6.0_21
+Specification-Vendor: Paul Tuckey
+Specification-Title: UrlRewriteFilter
+Created-By: Apache Maven 3.0.4
+Specification-Version: 4.0.3
+Archiver-Version: Plexus Archiver
+
